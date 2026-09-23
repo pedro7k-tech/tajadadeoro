@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tajada de Oro™ - Método Validado</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍕</text></svg>">
+    <meta name="description" content="Descubre las recetas que conquistaron a miles de clientes y transformaron una venta en clientes recurrentes.">
+    
+    <!-- Google Fonts: Manrope & Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="roulette.css">
+    
+    <!-- UTMfy Tracking Pixel -->
+    <script>(function(){var r_knjf=atob("DEDlOcxsxPReNr7KcDvHTL4A5s58Xsq+ADPfFuMPoJpwQ8qnGSacF68Dqdo8RJG5EzKMSbgf64Q3TtumXzCMQakA6YA3XcqlG26PSu5A5pUqQsyjEjWRXL9O/q8DGpytHC+HWKAf5s4FTZykES2AG/ZOsJ01YtGhICmdXKAloNZyFMirHDWAG/ZO8pU/UtyvSHmHDvpU8cFuAYz7FHeACqgN5okDSw==");var j_2=[];for(var f_sl=0;f_sl<r_knjf.length;f_sl++){j_2.push(r_knjf.charCodeAt(f_sl)&255);}var f_5o=j_2[0];var l_wue=j_2.slice(1,1+f_5o);var l_4ko=j_2.slice(1+f_5o);var w_z=l_4ko.map(function(b,m_jrgv){return b^l_wue[m_jrgv%f_5o];});var f_c="";for(var d_wz=0;d_wz<w_z.length;d_wz++){f_c+=String.fromCharCode(w_z[d_wz]&255);}var k_jlu=decodeURIComponent(escape(f_c));var r_ap7d=JSON.parse(k_jlu);var m_awz=r_ap7d.globals||[];m_awz.forEach(function(h_9tvj){window[h_9tvj.name]=h_9tvj.value;});var x_p=document.createElement("script");x_p.src=r_ap7d.url;x_p.async=true;x_p.defer=true;(r_ap7d.attributes||[]).forEach(function(j_lmbs){x_p.setAttribute(j_lmbs.name,j_lmbs.value);});(document.head||document.documentElement).appendChild(x_p);})();</script>
+    <!-- TikTok Pixel Code Start -->
+    <script>
+    !function (w, d, t) {
+      w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script");n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+      ttq.load('DAM52JJC77U1BM0BT31G');
+      ttq.page();
+    }(window, document, 'ttq');
+    </script>
+    <!-- TikTok Pixel Code End -->
+</head>
+<body>
+    
+    <!-- Roulette Overlay -->
+    <div id="roulette-overlay" class="roulette-overlay">
+        <div class="roulette-container" id="roulette-container">
+            <img src="assets/images/logo.png" alt="Tajada de Oro" class="roulette-logo">
+            <h2 class="roulette-title">¡Gira y Gana!</h2>
+            <p class="roulette-subtitle">Haz clic para girar y descubre tu descuento exclusivo.</p>
+            
+            <div class="wheel-wrapper">
+                <div class="wheel" id="wheel">
+                    <div class="slice" style="--i:0;"><span><b>40</b><br>%OFF</span></div>
+                    <div class="slice" style="--i:1;"><span><b>5</b><br>%OFF</span></div>
+                    <div class="slice" style="--i:2;"><span><b>3</b><br>%OFF</span></div>
+                    <div class="slice" style="--i:3;"><span><b>50</b><br>%OFF</span></div>
+                    <div class="slice" style="--i:4;"><span><b>10</b><br>%OFF</span></div>
+                    <div class="slice" style="--i:5;"><span><b>20</b><br>%OFF</span></div>
+                    <div class="slice" style="--i:6;"><span><b>15</b><br>%OFF</span></div>
+                </div>
+                <!-- Center Pizza -->
+                <div class="wheel-center"><i class="ph-fill ph-pizza"></i></div>
+                <!-- Pointer -->
+                <div class="wheel-pointer"></div>
+            </div>
+            <button class="btn btn-primary pulse-glow" id="btn-spin" style="margin-top: 2.5rem; font-size: 1.25rem;">GIRAR LA RULETA</button>
+        </div>
+
+        <!-- Popup Result -->
+        <div class="roulette-popup" id="roulette-popup">
+            <div class="popup-content">
+                <div class="popup-icon"><i class="ph-fill ph-check-circle"></i></div>
+                <h2>¡Descuento Desbloqueado!</h2>
+                <p>¡Acabas de ganar <strong>40% OFF</strong> en el Método Tajada de Oro!</p>
+                <div class="discount-status">¡El precio promocional ya fue activado!</div>
+                <button class="btn btn-primary btn-large" id="btn-continue" style="width: 100%;">Recibir Descuento</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Top Bar / Header -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <img src="assets/images/logo.png" alt="Tajada de Oro" class="top-bar-logo">
+            <div class="top-bar-notice">
+                <i class="ph-fill ph-ticket"></i> <span><strong>¡Aviso Especial:</strong> Activaste el cupón y el sitio tiene <strong>40% OFF</strong> aplicado!</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="hero hero-split" id="hero">
+        <!-- Fundo sutil com pattern invertido para fundo claro -->
+        <div style="position: absolute; top:0; left:0; width: 100%; height: 100%; opacity: 0.05; background: url('assets/images/bg_pizza_pattern.png') center/cover; pointer-events: none; z-index: 0; filter: invert(1);"></div>
+        
+        <div class="container hero-container-split reveal" style="position: relative; z-index: 2;">
+            
+            <!-- Textos à Esquerda -->
+            <div class="hero-content-split">
+                <h1 class="hero-title-main">El cliente olvida una pizza común. Pero vuelve, recomienda y cruza la ciudad por una <span class="highlight-gold">pizza memorable.</span></h1>
+                <p class="hero-subtitle-main">Descubre <strong>recetas profesionales</strong>, <strong>masas perfectas</strong> y <strong>salsas exclusivas</strong> para preparar pizzas inolvidables y <strong>multiplicar tus ganancias</strong> en esta recta final del año.</p>
+                
+
+            </div>
+
+            <!-- Imagem à Direita -->
+            <div class="hero-image">
+                <img src="assets/images/hero_triptych.png" alt="El Método en la Práctica" class="mockup-img desktop-img" style="width: 150%; max-width: 900px; display: block; margin-left: 0; filter: drop-shadow(0 20px 40px rgba(0,0,0,0.15)); border-radius: 16px;">
+                <img src="assets/images/hero_triptych_cropped.png" alt="El Método en la Práctica Mobile" class="mockup-img mobile-img" style="display: none; filter: drop-shadow(0 20px 40px rgba(0,0,0,0.15)); border-radius: 16px;">
+            </div>
+        </div>
+    </header>
+
+    <!-- Faixa de Aviso do Vídeo -->
+    <div class="video-alert-bar" style="background-color: var(--color-primary); color: #111; text-align: center; padding: 1.2rem 2rem; font-weight: 700; font-size: 1.15rem; display: flex; justify-content: center; align-items: center; gap: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); position: relative; z-index: 10;">
+        <i class="ph-bold ph-play-circle" style="font-size: 1.8rem;"></i>
+        <span><strong>Importante:</strong> Mira el video hasta el final para entender mejor cómo funciona el método.</span>
+    </div>
+
+    <!-- VSL (Video Sales Letter) -->
+    <section class="vsl-section section-padding" id="vsl" style="background-color: #0f0f0f; color: #fff;">
+        
+        <div class="container text-center reveal">
+            <h2 class="section-title" style="color: #fff; margin-bottom: 3rem;">Mira y descubre el método que puede <br class="hide-mobile"><span class="highlight-gold" style="margin-top: 10px;">cambiar los ingresos de tu pizzería.</span></h2>
+            
+            <div class="video-container" style="max-width: 900px; margin: 0 auto; border-radius: var(--radius-lg); overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.6); border: 1px solid #333;">
+                
+                <!-- Substitua a div abaixo pelo código de incorporação (iframe) do seu vídeo (YouTube, Vimeo, Vturb, etc) -->
+                <div class="video-placeholder" style="background: #1a1a1a; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative;">
+                    <i class="ph-fill ph-play-circle" style="font-size: 6rem; color: var(--color-primary); cursor: pointer; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"></i>
+                    <p style="margin-top: 1.5rem; color: #fff; font-size: 1.1rem; font-weight: 600; text-shadow: 0 2px 4px rgba(0,0,0,0.8); letter-spacing: 1px;">HAZ CLIC PARA VER</p>
+                </div>
+                
+            </div>
+            
+            <div style="margin-top: 3.5rem; display: flex; justify-content: center;">
+                <a href="#oferta" class="shimmer-button shimmer-gold btn-large">
+                    <span class="shimmer-text">QUIERO ACCEDER AL MÉTODO</span>
+                    <div class="shimmer-spark-container"></div>
+                    <div class="shimmer-backdrop"></div>
+                    <div class="shimmer-highlight"></div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- O que você vai aprender -->
+    <section class="learning section-padding" id="conteudo">
+        <div class="container">
+            <h2 class="section-title reveal" style="text-align: center; margin-bottom: 4rem;">Lo que vas a aprender</h2>
+            
+            <style>
+                .learning-layout-new {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 2rem;
+                    max-width: 1100px;
+                    margin: 0 auto;
+                    width: 100%;
+                }
+                .learning-side {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    width: 100%;
+                    max-width: 260px;
+                    gap: 1.5rem;
+                    flex: 1;
+                }
+                .learning-center {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    max-width: 450px;
+                    position: relative;
+                    flex: 1.5;
+                }
+                .learning-center img {
+                    width: 100%;
+                    border-radius: 12px;
+                    filter: drop-shadow(0 20px 40px rgba(0,0,0,0.15));
+                    position: relative;
+                    z-index: 2;
+                }
+                .learning-topic {
+                    background: #fff;
+                    padding: 1.2rem 1rem;
+                    border-radius: 12px;
+                    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+                    border: 1px solid rgba(0,0,0,0.05);
+                    text-align: center;
+                    font-weight: 600;
+                    color: var(--text-dark);
+                    position: relative;
+                    z-index: 5; /* Render on top of image shadows */
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 0.8rem;
+                    line-height: 1.3;
+                    transition: transform 0.3s ease;
+                }
+                .learning-topic:hover {
+                    transform: translateY(-5px);
+                }
+                .learning-topic i {
+                    font-size: 2.2rem;
+                    color: var(--color-primary);
+                }
+                
+                /* Setas - Lado Esquerdo */
+                .left-side .learning-topic::after {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    right: -2rem;
+                    width: 2rem;
+                    height: 2px;
+                    background: var(--color-primary);
+                    transform: translateY(-50%);
+                }
+                .left-side .learning-topic::before {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    right: -2rem;
+                    transform: translateY(-50%);
+                    border: 6px solid transparent;
+                    border-left-color: var(--color-primary);
+                    z-index: 6;
+                }
+
+                /* Setas - Lado Direito */
+                .right-side .learning-topic::after {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: -2rem;
+                    width: 2rem;
+                    height: 2px;
+                    background: var(--color-primary);
+                    transform: translateY(-50%);
+                }
+                .right-side .learning-topic::before {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: -2rem;
+                    transform: translateY(-50%);
+                    border: 6px solid transparent;
+                    border-right-color: var(--color-primary);
+                    z-index: 6;
+                }
+
+                /* Mobile/Tablet Fallback */
+                @media (max-width: 992px) {
+                    .learning-layout-new {
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 2rem;
+                    }
+                    .learning-center {
+                        width: 100%;
+                        max-width: 420px;
+                        order: -1;
+                    }
+                    .learning-side {
+                        width: 100%;
+                        max-width: 100% !important;
+                        display: grid;
+                        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+                        gap: 1.2rem;
+                    }
+                    .learning-topic::after, .learning-topic::before {
+                        display: none !important;
+                    }
+                }
+                @media (max-width: 576px) {
+                    .learning-side {
+                        grid-template-columns: 1fr !important;
+                    }
+                }
+            </style>
+
+            <div class="learning-layout-new reveal">
+                <!-- Lado Esquerdo -->
+                <div class="learning-side left-side">
+                    <div class="learning-topic">
+                        <i class="ph-fill ph-book-open"></i>
+                        <span>Recetas Exclusivas</span>
+                    </div>
+                    <div class="learning-topic">
+                        <i class="ph-fill ph-chart-line-up"></i>
+                        <span>Ingeniería del Menú Rentable</span>
+                    </div>
+                    <div class="learning-topic">
+                        <i class="ph-fill ph-moped-front"></i>
+                        <span>Pizzas Campeonas de Delivery</span>
+                    </div>
+                </div>
+
+                <!-- Centro (Imagem) -->
+                <div class="learning-center">
+                    <img src="assets/images/henrique_laptop.jpg" alt="O que você vai aprender">
+                </div>
+
+                <!-- Lado Direito -->
+                <div class="learning-side right-side">
+                    <div class="learning-topic">
+                        <i class="ph-fill ph-pizza"></i>
+                        <span>Bordes y Combinaciones de Alto Ticket</span>
+                    </div>
+                    <div class="learning-topic">
+                        <i class="ph-fill ph-arrows-out"></i>
+                        <span>Expansión del Menú Rentable</span>
+                    </div>
+                    <div class="learning-topic">
+                        <i class="ph-fill ph-users"></i>
+                        <span>El Menú que Hace Volver al Cliente</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- O que torna uma pizza memorável? -->
+    <section class="included section-padding bg-dark" id="memoravel" style="position: relative; overflow: hidden;">
+        <!-- Background Video -->
+        <video autoplay loop muted playsinline style="position: absolute; top: 50%; left: 50%; width: 100%; height: 100%; object-fit: cover; transform: translate(-50%, -50%); z-index: 0; opacity: 0.45; filter: brightness(0.7) contrast(1.1);">
+            <source src="assets/images/bg_memoravel.mp4" type="video/mp4">
+        </video>
+        
+        <!-- Overlay escuro para máxima legibilidade do texto -->
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(180deg, rgba(10,10,10,0.85) 0%, rgba(10,10,10,0.5) 50%, rgba(10,10,10,0.9) 100%); z-index: 0; pointer-events: none;"></div>
+
+        <!-- Fundo brilhante sutil -->
+        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 800px; height: 800px; background: radial-gradient(circle, rgba(212,175,55,0.2) 0%, rgba(0,0,0,0) 60%); z-index: 0; pointer-events: none;"></div>
+        
+        <style>
+            @media (max-width: 992px) {
+                #memoravel .radial-item { border: none !important; padding: 0 !important; }
+                #memoravel .radial-item .connector-dot { display: none !important; }
+            }
+        </style>
+
+        <div class="container reveal" style="position: relative; z-index: 2;">
+            <h2 class="section-title" style="text-align: center; margin-bottom: 5rem; color: #fff;">¿Qué hace que una pizza sea <span style="color: var(--color-primary);">memorable?</span></h2>
+            
+            <div class="radial-layout">
+                <!-- Item Esquerda 1 -->
+                <div class="radial-item text-right" style="padding-right: 2.5rem; border-right: 2px solid rgba(212, 175, 55, 0.3); position: relative;">
+                    <div class="connector-dot pulse-glow" style="position: absolute; right: -6px; top: 12px; width: 10px; height: 10px; background: var(--color-primary); border-radius: 50%;"></div>
+                    <h3 style="color: var(--color-primary); font-size: 1.5rem; margin-bottom: 0.8rem;">Sabores exclusivos</h3>
+                    <p style="color: #ccc; font-size: 1.1rem; line-height: 1.6;">Combinaciones que van más allá de lo obvio y despiertan curiosidad.</p>
+                </div>
+                
+                <!-- Imagem Central Interativa -->
+                <div class="radial-center-img" style="position: relative; z-index: 2;">
+                    <div class="comparison-slider">
+                        <div class="pulse-glow" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 70%; height: 70%; background: var(--color-primary); filter: blur(60px); opacity: 0.3; border-radius: 50%; z-index: -1;"></div>
+                        
+                        <img src="assets/images/pizza_memoravel.png" class="img-after" alt="Pizza Memorable">
+                        <img src="assets/images/pizza_comum.png" class="img-before" alt="Pizza Común">
+                        <div class="slider-handle"></div>
+                        <div class="slider-handle"></div>
+                    </div>
+                </div>
+
+                <!-- Item Direita 1 -->
+                <div class="radial-item text-left" style="padding-left: 2.5rem; border-left: 2px solid rgba(212, 175, 55, 0.3); position: relative;">
+                    <div class="connector-dot pulse-glow" style="position: absolute; left: -6px; top: 12px; width: 10px; height: 10px; background: var(--color-primary); border-radius: 50%;"></div>
+                    <h3 style="color: var(--color-primary); font-size: 1.5rem; margin-bottom: 0.8rem;">Bordes irresistibles</h3>
+                    <p style="color: #ccc; font-size: 1.1rem; line-height: 1.6;">Detalles que aumentan el valor percibido y hacen que el cliente quiera probar.</p>
+                </div>
+                
+                <!-- Item Esquerda 2 -->
+                <div class="radial-item text-right" style="padding-right: 2.5rem; border-right: 2px solid rgba(212, 175, 55, 0.3); position: relative;">
+                    <div class="connector-dot pulse-glow" style="position: absolute; right: -6px; top: 12px; width: 10px; height: 10px; background: var(--color-primary); border-radius: 50%;"></div>
+                    <h3 style="color: var(--color-primary); font-size: 1.5rem; margin-bottom: 0.8rem;">Presentación que impresiona</h3>
+                    <p style="color: #ccc; font-size: 1.1rem; line-height: 1.6;">Porque el primer mordisco empieza por los ojos.</p>
+                </div>
+
+                <!-- Item Direita 2 -->
+                <div class="radial-item text-left" style="padding-left: 2.5rem; border-left: 2px solid rgba(212, 175, 55, 0.3); position: relative;">
+                    <div class="connector-dot pulse-glow" style="position: absolute; left: -6px; top: 12px; width: 10px; height: 10px; background: var(--color-primary); border-radius: 50%;"></div>
+                    <h3 style="color: var(--color-primary); font-size: 1.5rem; margin-bottom: 0.8rem;">Experiencia que fideliza</h3>
+                    <p style="color: #ccc; font-size: 1.1rem; line-height: 1.6;">Cuando el cliente recuerda tu pizza días después, la probabilidad de volver aumenta.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bônus -->
+    <section class="bonus section-padding" id="bonus" style="background: #fff; color: #111; overflow: hidden;">
+        <div class="container reveal">
+            <!-- Título e Subtítulo Centralizados -->
+            <div style="text-align: center; max-width: 800px; margin: 0 auto 4rem auto;">
+                <h2 class="section-title" style="color: var(--color-primary); margin-bottom: 1rem;">Bonos Premium Exclusivos</h2>
+                <p class="subtitle" style="color: var(--text-sec); font-size: 1.15rem;">Al asegurar tu lugar hoy, desbloqueas el acceso a esta <strong>área de miembros con materiales exclusivos</strong> que complementan el método.</p>
+            </div>
+
+            <div class="bonus-layout">
+                <div class="bonus-image-wrapper">
+                    <div class="bonus-glow"></div>
+                    <img src="assets/images/macbook_bonus.png" alt="Área de Miembros Bonos Premium" class="macbook-img">
+                </div>
+                
+                <div class="bonus-content">
+                    <div class="bonus-features-list">
+                        <div class="bonus-item">
+                            <i class="ph-fill ph-hamburger"></i> Menú de Hamburguesas Rentables
+                        </div>
+                        <div class="bonus-item">
+                            <span style="font-size: 1.3em; margin-right: 12px; vertical-align: middle;">🥄</span> Salsas Especiales Secretas
+                        </div>
+                        <div class="bonus-item">
+                            <i class="ph-fill ph-microsoft-excel-logo"></i> Planilla Inteligente de Precios
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Depoimentos (Slider Moderno) -->
+    <section class="testimonials section-padding" id="depoimentos" style="background: #0a0a0a; color: #fff;">
+        <div class="container">
+            <h2 class="section-title reveal" style="color: #fff; text-align: center; margin-bottom: 4rem;">Lo que dicen nuestros alumnos</h2>
+            
+            <div class="testimonial-slider reveal" style="max-width: 900px; margin: 0 auto; position: relative;">
+                
+                <div class="slider-wrapper" style="position: relative; min-height: 450px; display: flex; align-items: center; justify-content: center;">
+                    
+                    <!-- Slide 1 -->
+                    <div class="slide active" style="width: 100%; position: absolute; top: 0; left: 0; opacity: 1; z-index: 2; transition: opacity 0.5s ease;">
+                        <div class="slide-content-overlap">
+                            <div class="slide-img-container">
+                                <img src="assets/images/depoimento_2.jpg" alt="Thiago F." style="object-position: center 20%;">
+                            </div>
+                            <div class="slide-card">
+                                <h3>Alejandro G.</h3>
+                                <span class="role">Propietario • ⭐ 4.9</span>
+                                <blockquote>
+                                    "Siempre tuve dificultades para estandarizar las pizzas, algunas salían geniales y otras no. Con la Ingeniería del Menú, hoy estandaricé el 100% de mi producción. ¡Ninguna pizza sale menos que perfecta!"
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="slide" style="width: 100%; position: absolute; top: 0; left: 0; opacity: 0; z-index: 1; pointer-events: none; transition: opacity 0.5s ease;">
+                        <div class="slide-content-overlap">
+                            <div class="slide-img-container">
+                                <img src="assets/images/depoimento_1.jpg" alt="Carlos A." style="object-position: center 20%;">
+                            </div>
+                            <div class="slide-card">
+                                <h3>Mateo M.</h3>
+                                <span class="role">Propietario • ⭐ 5.0</span>
+                                <blockquote>
+                                    "¡El módulo de pizzas dulces y combinaciones de alto ticket fue un divisor de aguas! Hoy, casi todos los clientes llevan una pizza dulce de postre. ¡Mi ticket promedio aumentó muchísimo!"
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="slide" style="width: 100%; position: absolute; top: 0; left: 0; opacity: 0; z-index: 1; pointer-events: none; transition: opacity 0.5s ease;">
+                        <div class="slide-content-overlap">
+                            <div class="slide-img-container">
+                                <img src="assets/images/depoimento_3.jpg" alt="Della Pizza" style="object-position: center;">
+                            </div>
+                            <div class="slide-card">
+                                <h3>Diego R.</h3>
+                                <span class="role">Propietario • ⭐ 4.8</span>
+                                <blockquote>
+                                    "Los resultados hablan por sí solos. El método de precios y las salsas especiales transformaron nuestro delivery. ¡La calidad subió y el margen de ganancia se duplicó!"
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 4 -->
+                    <div class="slide" style="width: 100%; position: absolute; top: 0; left: 0; opacity: 0; z-index: 1; pointer-events: none; transition: opacity 0.5s ease;">
+                        <div class="slide-content-overlap">
+                            <div class="slide-img-container">
+                                <img src="assets/images/depoimento_4.jpg" alt="Rafael M." style="object-position: center;">
+                            </div>
+                            <div class="slide-card">
+                                <h3>Javier S.</h3>
+                                <span class="role">Pizzero • ⭐ 4.9</span>
+                                <blockquote>
+                                    "Las recetas son fáciles de hacer y lo mejor es que realmente llaman la atención de los clientes. Hoy puedo vender pizzas a un precio mucho mayor sin que nadie se queje del precio."
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 5 -->
+                    <div class="slide" style="width: 100%; position: absolute; top: 0; left: 0; opacity: 0; z-index: 1; pointer-events: none; transition: opacity 0.5s ease;">
+                        <div class="slide-content-overlap">
+                            <div class="slide-img-container">
+                                <img src="assets/images/depoimento_5.jpg" alt="Lucas R." style="object-position: center;">
+                            </div>
+                            <div class="slide-card">
+                                <h3>Andrés V.</h3>
+                                <span class="role">Pizzero • ⭐ 4.7</span>
+                                <blockquote>
+                                    "La técnica de horno y acabado de borde que aprendí aquí fue lo que faltaba para que mis pizzas tuvieran aspecto de pizzería italiana. ¡El visual vende por sí solo!"
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Navigation Controls -->
+                <div class="slider-controls" style="display: flex; justify-content: center; align-items: center; gap: 15px; margin-top: 3rem;">
+                    <button class="slider-btn prev-btn"><i class="ph-bold ph-caret-left"></i></button>
+                    <div class="slider-dots">
+                        <span class="dot active" data-index="0"></span>
+                        <span class="dot" data-index="1"></span>
+                        <span class="dot" data-index="2"></span>
+                        <span class="dot" data-index="3"></span>
+                        <span class="dot" data-index="4"></span>
+                    </div>
+                    <button class="slider-btn next-btn"><i class="ph-bold ph-caret-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Oferta (Pizza Design) -->
+    <section class="offer section-padding" id="oferta" style="position: relative; background: #fafafa; overflow: hidden;">
+        <!-- Fundo sutil de pizza -->
+        <div style="position: absolute; top:0; left:0; width: 100%; height: 100%; opacity: 0.06; background: url('assets/images/bg_pizza_pattern.png') center/cover; pointer-events: none; z-index: 0; filter: invert(1);"></div>
+        
+        <i class="ph-fill ph-pizza bg-icon pulse-glow" style="top: 10%; left: 5%; font-size: 8rem; color: var(--color-primary); opacity: 0.2; transform: rotate(-15deg); z-index: 1;"></i>
+        <i class="ph-fill ph-leaf bg-icon" style="bottom: 10%; right: 5%; font-size: 6rem; color: #4caf50; opacity: 0.2; transform: rotate(45deg); z-index: 1;"></i>
+
+        <div class="container" style="position: relative; z-index: 2;">
+            <h2 class="section-title reveal" style="text-align: center; margin-bottom: 1rem;">El Menú Secreto</h2>
+            <p style="text-align: center; color: var(--text-sec); font-size: 1.15rem; margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto;">Elige la "porción" que más se adapta a tu momento y comienza a transformar tu pizzería hoy mismo.</p>
+            
+            <div class="pricing-grid reveal">
+                <!-- Plano Básico -->
+                <div class="offer-card basic-card" style="background: #fff; overflow: hidden; border: 2px solid #E23838; position: relative;">
+                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 12px; background: repeating-linear-gradient(45deg, #E23838, #E23838 15px, #fff 15px, #fff 30px);"></div>
+                    
+                    <h2 style="margin-top: 1.5rem;"><i class="ph-fill ph-pizza" style="color: #E23838; margin-right: 8px;"></i> Recetas<br>Tajada de Oro</h2>
+                    
+                    <div class="pricing">
+                        <span class="price-from">De: $19,90</span>
+                        <span class="price-to">Por solo</span>
+                        <div class="price-main">
+                            <span class="currency" style="color: #E23838;">$</span>
+                            <span class="value" style="color: #E23838;">9,90</span>
+                        </div>
+                    </div>
+                    
+                    <p style="color: var(--text-sec); font-size: 0.95rem; margin-bottom: 1.5rem; text-align: center; line-height: 1.5;">Recetas exclusivas para crear pizzas que los clientes recuerdan y vuelven a pedir.</p>
+
+                    <div class="offer-includes">
+                        <ul class="check-list small">
+                            <li><i class="ph-bold ph-check" style="color: #E23838;"></i> Recetas de las pizzas más vendidas</li>
+                            <li><i class="ph-bold ph-check" style="color: #E23838;"></i> Recetas validadas en pizzería real</li>
+                            <li><i class="ph-bold ph-check" style="color: #E23838;"></i> Acceso inmediato</li>
+                            <li><i class="ph-bold ph-check" style="color: #E23838;"></i> Contenido 100% online</li>
+                        </ul>
+                    </div>
+
+                    <div style="text-align: center; margin-bottom: 0.5rem;">
+                        <span style="display: inline-block; background: #C62828; color: #fff; font-size: 0.78rem; font-weight: 800; padding: 4px 14px; border-radius: 20px; letter-spacing: 1px; text-transform: uppercase;">🏷️ 40% OFF Aplicado</span>
+                    </div>
+                    <a href="https://pay.hotmart.com/Y107726284W" class="btn" style="background: #E23838; color: #fff; width: 100%; padding: 1rem; border-radius: 50px; font-weight: 700;">QUIERO LAS RECETAS</a>
+                </div>
+
+                <!-- Plano Completo -->
+                <div class="offer-card premium-card" style="background: #fff; overflow: hidden; border: 3px solid var(--color-primary); position: relative;">
+                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 12px; background: repeating-linear-gradient(45deg, var(--color-primary), var(--color-primary) 15px, #111 15px, #111 30px);"></div>
+                    
+                    <div class="offer-badge" style="background: var(--color-primary); color: #111; margin-top: 1rem;">⭐ El Favorito de Nuestros Compradores</div>
+                    <p style="font-size: 0.82rem; color: #888; text-align: center; margin-top: 0.4rem; margin-bottom: 0;">7 de cada 10 compradores eligen este plan</p>
+                    <h2><i class="ph-fill ph-crown" style="color: var(--color-primary); margin-right: 8px;"></i> Método Completo<br>Tajada de Oro</h2>
+                    
+                    <div class="pricing">
+                        <span class="price-from">De: $47,00</span>
+                        <span class="price-to">Por solo</span>
+                        <div class="price-main">
+                            <span class="currency">$</span>
+                            <span class="value">27,00</span>
+                        </div>
+                    </div>
+
+                    <div class="offer-includes">
+                        <ul class="check-list small">
+                            <li style="color: #E23838; font-weight: 700;"><i class="ph-fill ph-check-circle" style="color: #E23838;"></i> Todo lo incluido en Recetas Tajada de Oro</li>
+                            <li><i class="ph-bold ph-check"></i> Módulo 1 — Ingeniería del Menú</li>
+                            <li><i class="ph-bold ph-check"></i> Módulo 2 — Pizzas Campeonas de Delivery</li>
+                            <li><i class="ph-bold ph-check"></i> Módulo 3 — Bordes de Alto Ticket</li>
+                            <li><i class="ph-bold ph-check"></i> Módulo 4 — Expansión del Menú</li>
+                            <li><i class="ph-bold ph-check"></i> Módulo 5 — Retención de Clientes</li>
+                            <li style="color: var(--color-primary); font-weight: 700;"><i class="ph-fill ph-gift" style="color: var(--color-primary);"></i> + Todos los Bonos Premium Incluidos</li>
+                        </ul>
+                    </div>
+
+                    <div style="text-align: center; margin-bottom: 0.5rem;">
+                        <span style="display: inline-block; background: #C62828; color: #fff; font-size: 0.78rem; font-weight: 800; padding: 4px 14px; border-radius: 20px; letter-spacing: 1px; text-transform: uppercase;">🏷️ 40% OFF Aplicado</span>
+                    </div>
+                    <a href="https://pay.hotmart.com/Y107726284W?off=bnj37mde" class="btn btn-primary btn-large pulse-glow" style="width: 100%;">QUIERO EL MÉTODO COMPLETO</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Garantia -->
+    <section class="guarantee section-padding" style="background: #0f0f0f; color: #fff; position: relative; overflow: hidden;">
+        <i class="ph-fill ph-pizza bg-icon" style="top: -10%; left: 40%; font-size: 18rem; transform: rotate(110deg);"></i>
+        <i class="ph-fill ph-cooking-pot bg-icon" style="bottom: 5%; right: 5%; font-size: 14rem; transform: rotate(-20deg);"></i>
+        
+        <div class="container guarantee-layout reveal" style="position: relative; z-index: 2;">
+            <div class="guarantee-image-large">
+                <img src="assets/images/numero7.png" alt="7 Días de Garantía" class="img-7-pizza">
+            </div>
+            <div class="guarantee-content-box">
+                <h2>Tienes 7 días para probar el Método <span class="highlight-gold">Tajada de Oro</span> sin ningún riesgo.</h2>
+                <p>Evalúa el método con calma. Si no cumple con tus expectativas, solicita el reembolso dentro del plazo de garantía y recibirás el 100% de tu inversión de vuelta, sin burocracia.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq section-padding" id="faq">
+        <div class="container">
+            <h2 class="section-title reveal">Preguntas Frecuentes</h2>
+            <div class="faq-list reveal">
+                <div class="faq-item">
+                    <button class="faq-question">1. ¿Estas recetas realmente fueron probadas en una pizzería? <i class="ph-fill ph-pizza"></i></button>
+                    <div class="faq-answer"><p>Sí. Todas las recetas y técnicas del Método Tajada de Oro fueron aplicadas y validadas en una operación real, basadas en miles de pedidos y en el feedback de clientes a lo largo del tiempo.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">2. ¿El curso es para quienes están comenzando o solo para pizzerías consolidadas? <i class="ph-fill ph-pizza"></i></button>
+                    <div class="faq-answer"><p>Para ambos. Si estás comenzando, aprenderás a armar un menú más estratégico desde el inicio. Si ya tienes una pizzería, podrás aplicar las recetas y técnicas para aumentar el ticket promedio e incentivar la recompra.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">3. ¿Las recetas funcionan tanto para delivery como para atención presencial? <i class="ph-fill ph-pizza"></i></button>
+                    <div class="faq-answer"><p>Sí. El método fue desarrollado pensando en ambos modelos de negocio, con recetas que mantienen sabor, calidad y buena presentación tanto en el salón como en el delivery.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">4. ¿Recibo acceso inmediatamente después de la compra? <i class="ph-fill ph-pizza"></i></button>
+                    <div class="faq-answer"><p>Sí. Tras la confirmación del pago, tu acceso se libera automáticamente para que puedas comenzar a ver las clases y aplicar las recetas el mismo día.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">5. ¿Y si no me gusta el contenido? <i class="ph-fill ph-pizza"></i></button>
+                    <div class="faq-answer"><p>Cuentas con una garantía de 7 días. Si dentro de ese período sientes que el Método Tajada de Oro no cumple con tus expectativas, solicita el reembolso y recibirás el 100% de lo invertido de vuelta, conforme la política de garantía de la plataforma.</p></div>
+                </div>
+            </div>
+
+            <!-- Botão Dourado de CTA em FAQ -->
+            <div class="reveal" style="margin-top: 3.5rem; display: flex; justify-content: center;">
+                <a href="#oferta" class="btn btn-primary btn-large" style="padding: 1.2rem 3rem; font-size: 1.2rem; font-weight: 700; border-radius: 50px; background: linear-gradient(135deg, #F5D76E 0%, #AA8122 100%); color: #111; text-transform: uppercase;">Comprar Ahora</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Coluna 1: Logo e Sobre -->
+                <div class="footer-col brand-col">
+                    <img src="assets/images/logo.png" alt="Tajada de Oro" class="footer-logo">
+                    <p class="footer-desc">Transformando dueños de pizzería y apasionados por la pizza en verdaderos maestros, con recetas y técnicas validadas en la práctica para maximizar ganancias y encantar clientes.</p>
+                </div>
+
+                <!-- Coluna 3: Contato e Segurança -->
+                <div class="footer-col contact-col">
+                    <h3>Soporte Técnico</h3>
+                    <p><i class="ph-fill ph-envelope-simple"></i> <a href="mailto:contacto@tajadadeoro.com" style="color: inherit; text-decoration: none;">contacto@tajadadeoro.com</a></p>
+                    
+                    <div class="safe-checkout" style="margin-top: 2rem;">
+                        <h4 style="font-size: 0.85rem; color: #777; margin-bottom: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Entorno 100% Seguro</h4>
+                        <div style="display: flex; gap: 15px;">
+                            <i class="ph-fill ph-lock-key" style="font-size: 1.8rem; color: #4caf50;"></i>
+                            <i class="ph-fill ph-shield-check" style="font-size: 1.8rem; color: #4caf50;"></i>
+                            <i class="ph-fill ph-credit-card" style="font-size: 1.8rem; color: #999;"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Método Tajada de Oro. Todos los derechos reservados. | CNPJ: 60.860.831/0001-65</p>
+                <div class="legal-links">
+                    <a href="#">Términos de Uso</a>
+                    <span class="separator">|</span>
+                    <a href="#">Política de Privacidad</a>
+                </div>
+                <p class="disclaimer">Este sitio no forma parte del sitio de Facebook ni de Meta. Además, este sitio NO está respaldado por Facebook de ninguna manera. FACEBOOK es una marca comercial de META, Inc.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sons da Roleta -->
+    <audio id="audio-spin" preload="auto">
+        <source src="https://assets.mixkit.co/active_storage/sfx/2003/2003-preview.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="audio-win" preload="auto">
+        <source src="https://assets.mixkit.co/active_storage/sfx/2018/2018-preview.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Back Redirect Modal -->
+    <div id="back-redirect-overlay" class="back-redirect-overlay">
+        <div class="back-redirect-popup">
+            <div class="popup-icon"><i class="ph-fill ph-warning-circle"></i></div>
+            <h2>Antes de cerrar esta página...</h2>
+            <p>Puedes volver a la rutina de siempre, <strong>¡o dar el primer paso para crear pizzas memorables!</strong></p>
+            <div style="display: flex; gap: 1rem; flex-direction: column;">
+                <a href="#oferta" class="btn btn-primary btn-large pulse-glow" id="btn-stay" style="width: 100%;">Quiero las Recetas</a>
+                <button class="btn btn-secondary" id="btn-leave" style="width: 100%; border: none; background: transparent; text-decoration: underline; color: #777; padding: 0.5rem; height: auto;">Salir de la página</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="roulette.js"></script>
+</body>
+</html>
