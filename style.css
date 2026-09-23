@@ -1825,3 +1825,17 @@ p {
         aspect-ratio: 9/16;
     }
 }
+
+/* Mobile Optimizations (LatAm / Performance) */
+@media (max-width: 768px) {
+    .section-padding { padding: 2rem 0 !important; }
+    .hero { padding: 80px 0 40px !important; }
+    .hero-title-main { font-size: 2rem !important; }
+    h2.section-title { font-size: 1.7rem !important; margin-bottom: 1.5rem !important; }
+    .btn { width: 100% !important; min-height: 54px !important; }
+    p { font-size: 1rem !important; }
+    .cards-grid-4, .cards-grid-3, .pricing-grid { gap: 1.2rem !important; }
+    .mockup-img { margin-top: 1rem !important; }
+    .bonus-item { font-size: 0.95rem !important; padding: 1rem !important; }
+}
+
